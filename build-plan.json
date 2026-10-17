@@ -1,0 +1,73 @@
+{
+  "plan": {
+    "slug": "angular-ssr-security-guardian",
+    "kind": "angular-application",
+    "architecture": "clean-architecture-middleware-layer-with-ssr-integration-and-v8-memory-optimization",
+    "visual": {
+      "audience": "desenvolvedores-angular-ssr, equipes-de-segurança-corporativa, arquitetos-web",
+      "primaryTask": "analisar e sanitizar URLs com parâmetros matriciais numéricos em tempo real para mitigar DoS em Angular SSR",
+      "compositions": [
+        "análise-de-url-em-tempo-real-com-sanitização-de-parâmetros-matriciais",
+        "cache-de-objetos-v8-otimizado-com-limpeza-de-memória-contínua"
+      ],
+      "selectionReason": "Composições diretas ao domínio, sem decoração repetitiva ou elementos não funcionais.",
+      "screens": [
+        "frontend/src/app/product-app/product-app.component.html",
+        "frontend/src/app/product-app/product-app.component.ts",
+        "backend/app/main.py",
+        "backend/app/urls.py",
+        "database/tables.sql"
+      ]
+    },
+    "features": [
+      {
+        "name": "analyzer-url-matrix-parameters",
+        "acceptance": [
+          "análise de URL em tempo real com regex e sanitização de parâmetros matriciais",
+          "validação de tipos estritos com TypeScript",
+          "suíte de testes automatizados com 100% de cobertura"
+        ],
+        "files": [
+          "frontend/src/app/product-app/product-app.component.ts",
+          "frontend/src/app/product-app/product-app.component.html",
+          "frontend/src/app/product-app/product-app.component.spec.ts"
+        ]
+      },
+      {
+        "name": "v8-object-cache-optimizer",
+        "acceptance": [
+          "cache de objetos V8 com limpeza contínua de memória",
+          "validação de tipos estritos com TypeScript",
+          "suíte de testes automatizados com 0 falhas"
+        ],
+        "files": [
+          "backend/app/main.py",
+          "backend/app/urls.py",
+          "database/tables.sql"
+        ]
+      },
+      {
+        "name": "middleware-security-guardian",
+        "acceptance": [
+          "middleware de segurança com análise de URLs em tempo real",
+          "sanitização de parâmetros matriciais numéricos",
+          "suíte de testes automatizados com 100% de cobertura"
+        ],
+        "files": [
+          "frontend/src/app/product-app/product-app.component.ts",
+          "backend/app/main.py",
+          "backend/app/urls.py"
+        ]
+      }
+    ],
+    "limitations": [
+      "overhead de runtime dependendo da carga concorrente",
+      "não há suporte para parâmetros matriciais não numéricos",
+      "não há suporte para URLs com parâmetros matriciais em formato de string"
+    ]
+  },
+  "approvedCriteria": [
+    "Compilação sem erros de tipagem com TypeScript estrito.",
+    "Suíte de testes automatizados com 100% de aprovação e execução determinística."
+  ]
+}
